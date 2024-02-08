@@ -3,14 +3,14 @@ import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'; // I
 // import ShopCard from './website/components/cards/shopCard';
 import { AnimatePresence } from "framer-motion";
 import Layout from './website/pages/layouts/dashboardLayout';
-import '../src/assets/styling/style.css'
+import '../src/assets/styling/utilityClasses.css'
 import Dashboard from './website/pages/dashboard/dashboard';
 import Messenger from './website/pages/messenger/messenger';
-import Signup from './website/pages/registration/signup';
-import Login from './website/pages/registration/login';
+import Signup from './website/pages/registration/signup/signup';
 import DashboardLayout from './website/pages/layouts/dashboardLayout';
 import WebsiteLayout from './website/pages/layouts/websiteLayout';
 import { ROUTES } from './utils/routes';
+import Login from './website/pages/registration/login/login';
 
 function App() {
   const location = useLocation();

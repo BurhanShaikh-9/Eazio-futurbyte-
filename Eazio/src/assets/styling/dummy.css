@@ -1,0 +1,312 @@
+@font-face {
+    font-family: "poppinRegular";
+    src: url("Poppins-Regular.ttf") format("truetype");
+}
+
+:root {
+    --easeInTransition: all .3s ease-in;
+    --baseColor: #FBAC18;
+    --baseColor2: #0E0E0E;
+    --baseColor3: #5438FF;
+    --baseColor4: #ffff;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'poppinRegular';
+}
+
+.fs1 {
+
+    font-size: clamp(0.2rem, 5vw, 1rem);
+}
+
+.fs1_4 {
+    font-size: clamp(1.4rem, 5vw, 1.4rem);
+}
+
+.fs1_7 {
+    font-size: clamp(1.4rem, 1.3vw, 2rem);
+}
+
+
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mainButton {
+    background-color: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--baseColor2);
+    height: 60px;
+    border: 3px solid var(--baseColor);
+    background-image: -webkit-linear-gradient(30deg, var(--baseColor) 50%, transparent 50%);
+    background-image: linear-gradient(30deg, var(--baseColor) 50%, transparent 50%);
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+}
+
+.mainButton:hover {
+    background-position: 100%;
+    color: var(--baseColor);
+}
+
+.mainButton2 {
+    border-radius: 15px;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--baseColor4);
+    height: 70px;
+    border: 3px solid var(--baseColor3);
+    background-image: -webkit-linear-gradient(30deg, var(--baseColor) 50%, transparent 50%);
+    background-image: linear-gradient(30deg, var(--baseColor3) 50%, transparent 50%);
+    background-size: 1000px;
+
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+}
+
+.mainButton2:hover {
+    background-position: 100%;
+    color: var(--baseColor3);
+}
+
+.mainButton3 {
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--baseColor3);
+    height: 70px;
+    border: 3px solid var(--baseColor3);
+    background-image: -webkit-linear-gradient(30deg, var(--baseColor) 50%, transparent 50%);
+    background-image: linear-gradient(30deg, var(--baseColor3) 50%, transparent 50%);
+    background-size: 1000px;
+
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+    background-position: 100%;
+}
+
+.mainButton3:hover {
+    background-position: 0;
+    color: var(--baseColor4);
+}
+
+
+
+/* shop card css  */
+
+.customContainer {
+    width: auto;
+    padding-right: calc(1.5rem * .5);
+    padding-left: calc(1.5rem * .5);
+    margin-right: auto;
+    margin-left: auto;
+    transition: var(--easeInTransition);
+}
+
+.closedTag {
+    color: red;
+    border: 1px solid red;
+    display: block;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: rgba(255, 0, 0, 0.226);
+}
+
+.shopCard {
+    /* margin: 0 auto; */
+    
+    max-width: 400px;
+    min-width: 300px;
+    border-radius: 15px;
+    background-color: #2c2c2c;
+    
+}
+.shopCard .shopCardInner{
+    padding: 10px;
+}
+
+.cardBadgeImage,
+.artistCoverProfile {
+    position: absolute;
+}
+
+.cardBadgeImage {
+    right: 50px;
+    top: 10px;
+}
+
+.artistCoverProfile {
+    bottom: -15px;
+    left: 20px;
+}
+
+.shopCard .shopCardInner .imageWrapper {
+    width: 100%;
+    position: relative;
+}
+
+.artistCoverProfile {
+    width: 50px;
+    height: 50px;
+}
+
+.shopCard .shopCardInner .imageWrapper .artistCoverCard {
+    width: 100%;
+    height: 230px;
+}
+
+.shopCard .cardTitle {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.cardTitle .titleMain {
+    color: white;
+}
+
+.shopCard .cardRarting .stars {
+    margin-top: 5px;
+    color: var(--baseColor);
+    display: flex;
+    gap: 8px;
+    font-size: 23px;
+}
+
+.shopParagraph {
+    margin-top: 10px;
+    color: white;
+}
+
+.shopCardButton {
+    margin-top: 15px;
+    width: 100%;
+}
+
+
+.cardWrapper {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.page1{
+    background-color: red;
+}
+.page2{
+    background-color: blue;
+}
+
+@media (max-width: 1715px) {
+    .shopCard {
+        max-width: 300px;
+    }
+    .shopCard .shopCardInner .imageWrapper .artistCoverCard {
+      
+        height: 170px;
+    }
+    .shopCardButton{
+        height: 52px;
+    }
+    .fs1_4 {
+        font-size: clamp(0.8rem, 5vw, 1rem);
+    }
+}
+
+
+@media (min-width: 576px) {
+    .customContainer {
+        width: auto;
+    }
+}
+
+@media (min-width: 576px) {
+    .customContainer {
+        max-width: 540px;
+    }
+    /* .shopCard {
+        max-width: 300px;
+    } */
+}
+
+
+@media (min-width: 768px) {
+    .customContainer {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 991px) {
+    .customContainer {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .customContainer {
+        max-width: 1372px;
+        /* max-width: 1140px; */
+    }
+    /* .cardWrapper {
+        gap: 25px;
+    } */
+}
+
+@media (min-width: 1440px) {
+
+    /* .shopCard {
+        max-width: 382.19px;
+        min-width: 300px;
+    } */
+
+
+
+    .customContainer {
+        max-width: 1340px;
+    }
+}
+
+
+@media (min-width: 1600px) {
+    .customContainer {
+        max-width: 1540px;
+    }
+}
+@media (min-width: 1600px) {
+    .customContainer {
+        max-width: 1740px;
+    }
+}
+
+
+/* 
+@media (max-width: 1440px) {
+    .shopCard {
+        max-width: 382.19px;
+        min-width: 300px;
+    }
+} */

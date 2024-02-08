@@ -1,0 +1,383 @@
+/* HEADER CSS STARTS */
+
+.nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 36px 0;
+    justify-content: space-between;
+}
+
+.headerContainer {
+    width: auto;
+}
+
+.nav>.nav-header>.nav-title {
+    font-size: 22px;
+    color: black;
+}
+
+.nav>.desktopMenu {
+    display: flex;
+    gap: 2rem;
+    flex: 1;
+    justify-content: center;
+    color: var(--baseColor4);
+}
+.desktopEnd{
+    display: flex;
+}
+
+.nav>.desktopMenu .active {
+    position: relative;
+    font-weight: 700;
+}
+
+.active::after {
+    content: '';
+    height: 3px;
+    position: absolute;
+    width: 64px;
+    background-color: var(--baseColor1);
+    bottom: -10px;
+    left: -10px;
+}
+
+
+
+.desktopMenu {
+    margin: 0;
+
+}
+
+.nav>.nav-list>li {
+    list-style-type: none;
+}
+
+.nav>.nav-list>li a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.nav>#nav-check {
+    display: none;
+}
+
+.mobileMenu {
+    display: none;
+    transform: translateX(-100%);
+    height: 100vh;
+    transition: all .3s ease;
+    margin-top: 0;
+    z-index: 3;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.226);
+    width: 100vw;
+}
+
+.menuActive {
+    transform: translateX(0);
+    transition: all .3s ease;
+    margin-top: 0;
+    position: fixed;
+}
+
+
+.innerMenuMobile {
+    position: relative;
+    width: 300px;
+    background-color: white;
+    height: 100vh;
+}
+
+.innerMenuMobile .closeButton {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    cursor: pointer;
+}
+.innerMenuMobile ul{
+    list-style: none;
+    padding: 30px 10px 10px 10px;
+  
+}
+.innerMenuMobile ul>:nth-child(2){
+    margin-top: 50px;
+}
+.innerMenuMobile ul li {
+    border-bottom: 1px solid lightgray;
+}
+.innerMenuMobile ul>:last-child{
+    border-bottom: none;
+}
+.innerMenuMobile ul>:first-child{
+    border-bottom: none;
+}
+.closeButton{
+    background-color: transparent;
+    border: none;
+}
+.mobLists{
+    margin: 0 30px 10px 30px;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+.mobLists a{
+    color: black;
+}
+
+
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.navEnd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 16px; */
+}
+
+.languageFilter {
+    display: flex;
+    align-items: center;
+    margin-right: 32px;
+    position: relative;
+}
+
+.languageFilter svg {
+    font-size: 20px;
+}
+
+.languageDropDown {
+    border: 1px solid white;
+}
+
+.languageDropDown:focus {
+    outline: none;
+}
+
+.languageFilter::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    right: -14px;
+    height: 29px;
+    background-color: grey;
+}
+
+
+.loginButton {
+    margin-right: 16px;
+}
+.loginButton a{
+    color: black;
+}
+
+
+.headerDemoBtn {
+    padding: 14px 27px 13px 27px;
+}
+
+/* .mobileMenu {
+   
+} */
+
+
+
+/* HEADER CSS ENDS */
+.leftLoginMenu h2{
+    margin-bottom: 40px;
+}
+
+
+.loginMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0px;
+}
+.leftLoginMenu {
+    margin-bottom: 70px;
+}
+
+.rightLoginMenu {
+    min-width: 369px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: calc(100% - 20px);
+    padding: 21px 10px;
+    border: 1px solid transparent;
+    background-color: #FFF7ED;
+    color: #FAB777;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group label {
+    position: absolute;
+    left: 30px;
+    top: 22px;
+    font-size: 14px;
+    color: #FAB777;
+    transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--baseColor1);
+    outline: none;
+}
+
+.form-group input:focus+label,
+.form-group input:not(:placeholder-shown)+label {
+    top: -6px;
+    font-size: 12px;
+    color: var(--baseColor1);
+    background-color: #ffffff;
+    padding: 0 4px;
+    border-radius: 4px;
+    left: 8px;
+}
+
+.rightLoginMenu h2 {
+    margin-bottom: 28px;
+}
+
+.formGroupMb{
+    margin-bottom: 38px;
+
+}
+.themeLink{
+    display: flex;
+    justify-content:end;
+}
+.themeLink a{
+    text-decoration: none;
+    color: var(--baseColor5);
+}
+.themeLink a:hover{
+    color: var(--baseColor6);
+}
+
+
+.passEyeIcon {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    color: var(--baseColor6);
+    top: 18px;
+    font-size: 25px;
+
+}
+.socialButtons{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    gap: 10px;
+}
+.socialButtons button {
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+}
+
+.socialButtons button img {
+    width: 100%;
+    object-fit: contain;
+}
+.formButton button{
+    width: 100%;
+    padding: 19px 0;
+    margin: 46px 0;
+}
+.continueWith{
+    color: var(--baseColor5);
+    text-align: center;
+}
+.paraLink a{
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--baseColor7);
+}
+
+.invalidInput{
+    position: absolute;
+    color: red;
+    font-size: 12px;
+}
+
+@media (max-width: 991px) {
+    
+    .loginMain{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .rightLoginMenu .formOuter h2{
+        display: none;
+    }
+
+    .burgerMenu {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        bottom: 45px;
+        padding-top: 0.2rem;
+        cursor: pointer;
+        z-index: 2;
+        width: 50px;
+        height: 40px;
+        /* transform: translate(0, -50%); */
+    }
+
+    .burgerMenu>label {
+        display: inline-block;
+        cursor: pointer;
+        padding: 13px;
+    }
+
+    .burgerMenu>label>span {
+        display: block;
+        width: 25px;
+        height: 5px;
+        border-top: 2px solid #797979;
+    }
+
+    .desktopMenu {
+        display: none !important;
+    }
+    .desktopEnd{
+        display: none !important;
+    }
+
+    .mobileMenu {
+        display: block;
+    }
+
+
+
+}
+
+@media (max-width: 576px) {
+    .mobileMenu {
+        width: 100vw;
+    }
+    .rightLoginMenu{
+            min-width: 300px;
+    }
+}
