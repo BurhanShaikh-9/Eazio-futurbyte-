@@ -1,4 +1,3 @@
-
 p,
 h1,
 h2,
@@ -9,9 +8,11 @@ body {
     padding: 0;
     margin: 0;
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 :root {
     --easeInTransition: all .3s ease-in;
     --baseColor1: #F4711E;
@@ -25,46 +26,72 @@ a{
     --baseColor9: #F7F8FA;
     font-size: 16px;
 }
-.dbIconTheme{
+
+.dbIconTheme {
     font-size: 25px;
     color: #C3CAD9;
     background-color: white;
     border-radius: 50%;
+    cursor: pointer;
+}
+.dbIconTheme:hover{
+    color: var(--baseColor2);
 }
 ::-webkit-scrollbar {
     width: 5px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Firefox */
+/* Width */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
 
 
 
 .webApp header {
     font-family: 'Source Sans 3', sans-serif;
 }
-.mainBody{
+
+.mainBody {
     font-family: 'Poppins', sans-serif;
 }
-.dashboard header{
+
+.dashboard header {
     font-family: 'Roboto', sans-serif;
 }
-.dashboard header{
+
+.dashboard header {
     font-family: 'Roboto', sans-serif;
 }
-.mainDashboard{
+
+.mainDashboard {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -73,11 +100,33 @@ a{
     font-size: clamp(1.4rem, 4vw, 3rem);
     font-weight: 600;
 }
+
 .fs2 {
     font-size: clamp(1.4rem, 4vw, 2rem);
     font-weight: 500;
 }
 
+
+.mainButton1 {
+    border-radius: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--baseColor3);
+    border: 3px solid var(--baseColor2);
+    background-image: -webkit-linear-gradient(30deg, var(--baseColor2) 50%, transparent 50%);
+    background-image: linear-gradient(30deg, var(--baseColor2) 50%, transparent 50%);
+    background-size: 1000px;
+    font-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+}
+
+.mainButton1:hover {
+    background-position: 100%;
+    color: var(--baseColor2);
+}
 
 .mainButton2 {
     border-radius: 10px;
@@ -115,6 +164,7 @@ a{
     transition: background 300ms ease-in-out;
     background-position: 100%;
 }
+
 .mainButton3:hover {
     background-position: 0;
     color: var(--baseColor3);
@@ -129,6 +179,7 @@ a{
     margin-left: auto;
     transition: var(--easeInTransition);
 }
+
 .bodyContainer {
     width: auto;
     padding-right: calc(1.5rem * .5);
@@ -139,27 +190,38 @@ a{
 }
 
 @media (min-width: 576px) {
-    .customContainer, .bodyContainer {
+
+    .customContainer,
+    .bodyContainer {
         width: auto;
     }
 }
 
 @media (min-width: 576px) {
-    .customContainer, .bodyContainer {
+
+    .customContainer,
+    .bodyContainer {
         max-width: 540px;
     }
 }
 
 
 @media (min-width: 768px) {
-    .customContainer,.bodyContainer {
+
+    .customContainer,
+    .bodyContainer {
         max-width: 720px;
     }
 }
 
 @media (min-width: 991px) {
-    .customContainer,.bodyContainer {
+
+    .customContainer,
+    .bodyContainer {
         max-width: 960px;
+    }
+    .burgerMenu.burger-toggle{
+        display: none;
     }
 }
 
@@ -167,6 +229,7 @@ a{
     .customContainer {
         max-width: 1250px;
     }
+
     .bodyContainer {
         max-width: 1045px;
     }
@@ -184,12 +247,9 @@ a{
         max-width: 1540px;
     }
 }
+
 @media (min-width: 1600px) {
     .customContainer {
         max-width: 1740px;
     }
 }
-
-
-
-

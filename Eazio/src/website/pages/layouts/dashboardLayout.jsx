@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
 import Footer from '../../component/footer/footer'
 import SideBar from '../../component/sidebar/sideBar'
@@ -9,24 +9,40 @@ import ProfilePanel from '../../component/profilePanel/profilePanel'
 import { motion } from "framer-motion"
 
 const DashboardLayout = () => {
-    const { isNav } = useToggleNav()
+    const { isNav, toggleNav } = useToggleNav()
     const motionAnimation = {
         initial: { opacity: 0 },
         animate: { opacity: 1 },
         transition: { type: "spring", stiffness: 100 }
     };
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 1300 && !isNav) {
+                toggleNav(); 
+            }
+        };
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [isNav, toggleNav]);
+
     return (
         <React.Fragment>
             <div className="dashboard">
                 <HeaderDashboard />
                 <div className={`dashboardBody ${isNav ? 'isNavActive' : ''}`}>
                     <SideBar />
-                    <motion.div {...motionAnimation}>
-                        <div className="mainDashboard">
-                            <ProfilePanel />
-                            <Outlet />
-                        </div>
-                    </motion.div>
+                    <div className="mainDashboardOuter">
+
+                        <motion.div {...motionAnimation}>
+                            <div className="mainDashboard">
+                                <ProfilePanel />
+                                <Outlet />
+                            </div>
+                        </motion.div>
+                    </div>
                     {/* <Footer /> */}
                 </div>
             </div>

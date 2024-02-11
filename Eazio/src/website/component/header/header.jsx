@@ -10,7 +10,7 @@ const Header = () => {
   const [isNav, setIsNav] = useState(false)
 
   const pageListing = [
-    { label: 'Home', route: ROUTES.HOME, active: 'active' },
+    { label: 'Home', route: ROUTES.TASK, active: 'active' },
     { label: 'Careers', route: '/', active: 'none' },
     { label: 'Pricing', route: '/', active: 'none' },
     { label: 'Feature', route: '/', active: 'none' },

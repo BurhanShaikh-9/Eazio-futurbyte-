@@ -11,6 +11,7 @@ import DashboardLayout from './website/pages/layouts/dashboardLayout';
 import WebsiteLayout from './website/pages/layouts/websiteLayout';
 import { ROUTES } from './utils/routes';
 import Login from './website/pages/registration/login/login';
+import MessengerLayout from './website/pages/layouts/messengerLayout';
 
 function App() {
   const location = useLocation();
@@ -21,7 +22,9 @@ function App() {
 
         <Routes location={location} key={location.pathname}>
           <Route element={<DashboardLayout />}>
-            <Route path={ROUTES.HOME} element={<Dashboard />} />
+            <Route path={ROUTES.TASK} element={<Dashboard />} />
+          </Route>
+          <Route element={<MessengerLayout />}>
             <Route path={ROUTES.MESSENGER} element={<Messenger />} />
           </Route>
           <Route element={<WebsiteLayout />}>

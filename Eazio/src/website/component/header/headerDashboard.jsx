@@ -18,7 +18,7 @@ const HeaderDashboard = () => {
   const { toggleNav } = useToggleNav();
 
   const pageListing = [
-    { label: 'Dashboard', route: ROUTES.HOME, active: 'active' },
+    { label: 'Dashboard', route: ROUTES.TASK, active: 'active' },
     { label: 'About Us', route: '/', active: 'none' },
     { label: 'News', route: '/', active: 'none' },
     { label: 'User Policy', route: '/', active: 'none' },
